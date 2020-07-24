@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title>NYSL | Register</title>
+	<link rel="stylesheet" href="styles/nysl_3.css">
+	<link rel="shortcut icon" href="img/nysl_logo.png">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+</head>
+
+<body>
+	<header>
+		<h1>Northside Youth Soccer League</h1>	
+		<img src="img/nysl_logo.png" alt="Logo NYSL" id="logo">
+
+		<div id="current-page">
+			<h2>Registration Form</h2>
+		</div>
+		
+		<nav>
+			<a href="index.html" target="_blank">Home</a>
+			<a href="about.html" target="_blank">About NYSL</a>
+			<a href="contact.html" target="_blank">Contact</a>
+			<a id="plus-nav" href="gallery.html" target="_blank">Gallery</a>
+			<a href="schedule.html" target="_blank">Schedule</a>
+            <a href="rules.html" target="_blank">Rules</a>
+            <a href="#" id="current-nav">Register</a>
+		</nav>
+    </header>
+    
+    <main>
+        <article>
+            <h3>REGISTRATION FORM</h3>
+            <form action="show_data.html">
+				<fieldset>
+					<legend>Personal Information</legend>
+					<label>Player's First Name: 
+						<input type="text" placeholder="Aylen" name="first-name" required>
+					</label>
+					<label>Last Name: 
+						<input type="text" placeholder="Diaz" name= "last-name" required>
+					</label>
+					<label>Street Address: 
+						<input type="text" placeholder="St. False" name= "street-adress" required>
+					</label>
+					<label>City: 
+						<input type="text" placeholder="Northside" name= "city-name" required>
+					</label>
+					<label>Zip Code: 
+						<input type="number" name="zip-code" required>
+					</label>
+					<label>Birth Date (mm/dd/yyyy): 
+						<input type="date" name="birth-date" required>
+					</label>
+
+					<div>	
+						<h4>Gender: </h4>
+						<label>Female
+							<input type="radio" name="gender" value="female">
+						</label>
+						<label>Male
+							<input type="radio" name="gender" value="male">
+						</label>
+					</div>
+					
+					<div>
+						<h4>Grade: </h4>
+						<label>Pre-School 
+							<input type="radio" name="grade" value="pre-school">
+						</label>
+						<label>1st 
+							<input type="radio" name="grade" value="1st">
+						</label>
+						<label>2nd 
+							<input type="radio" name="grade" value="2nd">
+						</label>
+						<label>3rd 
+							<input type="radio" name="grade" value="3rd">
+						</label>
+						<label>4th 
+							<input type="radio" name="grade" value="4th">
+						</label>
+						<label>5th 
+							<input type="radio" name="grade" value="5th">
+						</label>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>Contact Information</legend>
+					<label>Parent/Guardian: 
+						<input type="text" name="parent" required>
+					</label>
+					<label>Contact Phone: 
+						<input type="tel" name="phone" required>
+					</label>
+					<label>Contact Email: 
+						<input type="text" placeholder="nysf@gmail.com" name="email" required>
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Which elementary schools do you live near?</legend>
+					<div>
+						<label for="fst-schools">First Closest School: </label>
+						<select name="schools" id="fst-schools">
+							<option value="aj-katzenmaier">AJ Katzenmaier</option>
+							<option value="marjorie-p-hart">Marjorie P Hart</option>
+							<option value="greenbay">Greenbay</option>
+							<option value="north-elem">North Elementary</option>
+							<option value="howard-a-yeager">Howard A Yeager</option>
+							<option value="south-elem">South Elementary</option>
+						</select>
+					</div>
+					<div>
+						<label for="snd-schools">Second Closest School: </label>
+						<select name="schools" id="snd-schools">
+							<option value="aj-katzenmaier">AJ Katzenmaier</option>
+							<option value="marjorie-p-hart">Marjorie P Hart</option>
+							<option value="greenbay">Greenbay</option>
+							<option value="north-elem">North Elementary</option>
+							<option value="howard-a-yeager">Howard A Yeager</option>
+							<option value="south-elem">South Elementary</option>
+						</select>
+					</div>
+				</fieldset>
+				
+				<fieldset>
+					<legend>What position(s) do you normally play? (check all that apply)</legend>
+					<label>Forward
+						<input type="checkbox" name="positions" value="forward">
+					</label>
+					<label>Midfield
+						<input type="checkbox" name="positions" value="midfield">
+					</label>
+					<label>Defense
+						<input type="checkbox" name="positions" value="defense">
+					</label>
+					<label>Goalkeeper
+						<input type="checkbox" name="positions" value="goalkeeper">
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>What position(s) do you want to play? (check all that apply)</legend>
+					<label>Forward
+						<input type="checkbox" name="positions" value="forward">
+					</label>
+					<label>Midfield
+						<input type="checkbox" name="positions" value="midfield">
+					</label>
+					<label>Defense
+						<input type="checkbox" name="positions" value="defense">
+					</label>
+					<label>Goalkeeper
+						<input type="checkbox" name="positions" value="goalkeeper">
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Uniform Information</legend>
+					<label>Already Have a Uniform
+						<input type="radio" name="uniform" value="uniform">
+					</label>
+					<div>
+						<label for="jersey-size">Jersey Size: </label>
+						<select name="sizes" id="jersey-size">
+							<option value="youth-small">Youth Small</option>
+							<option value="youth-medium">Youth Medium</option>
+							<option value="youth-large">Youth Large</option>
+							<option value="small">Large</option>
+							<option value="medium">Medium</option>
+							<option value="large">Large</option>
+							<option value="x-large">Extra-Large</option>
+						</select>
+					</div>
+					<div>
+						<label for="shorts-size">Shorts Size: </label>
+						<select name="sizes" id="shorts-size">
+							<option value="youth-small">Youth Small</option>
+							<option value="youth-medium">Youth Medium</option>
+							<option value="youth-large">Youth Large</option>
+							<option value="small">Large</option>
+							<option value="medium">Medium</option>
+							<option value="large">Large</option>
+							<option value="x-large">Extra-Large</option>
+						</select>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>Permission to Play</legend>
+					<p>I, the parent or guardian of the minor registrant, agree that the registrant and I will abide by all the rules of the Northside Youth
+						Soccer League (NYSL). In recognizing the possibility of physical injury associated with soccer and in consideration for the “League”
+						accepting the registrant for its soccer programs and activities, I hereby release, discharge, and/or otherwise indemnify NYSL, their
+						employees and associated personnel and volunteers, including the facilities used for practices and games, against any claim by or
+						on behalf of the registrant as a result of the registrant’s participation in the program and/or being transported to or from NYSL
+						sponsored activities, which transportation.
+						By signing below, I hereby agree and authorize the above. In addition, by signing below, I also acknowledge that I have read the
+						cancellation policy and agree to its terms.</p>
+					<label>Parent/Guardian Signature: 
+						<input type="text" name="signature" required>
+					</label>
+					<label>Date: 
+						<input type="date" name="date" required>
+					</label>
+				</fieldset>
+
+				<input type="submit" value="Submit">
+			</form>
+        </article>
+    </main>
+
+    <footer>
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+    </footer>
+</body>
+
+</html>

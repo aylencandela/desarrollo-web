@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+}
+
+header{
+    height: 150px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 150%;
+    background-image: url("../img/design1_image1.jpg");
+    background-size: cover;
+    background-position: center, top;
+}
+
+#current-page{
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: black;
+}
+
+#logo{
+    position: absolute;
+    top: 18%;
+    right:10%;
+    width: 8%;
+}
+
+nav{
+    padding: 1vw 1vw 100vw 1vw;
+    float: left;
+    width: 15vw;
+}
+
+nav>a{
+    display: block;
+    padding: 20%;
+    color: steelblue;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-decoration: none;
+}
+
+#plus-nav{
+    display: none;
+}
+
+#current-nav{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+article{
+    float: left;
+    width: 80vw;
+    padding-top: 2%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+article>p{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
