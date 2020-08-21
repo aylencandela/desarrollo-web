@@ -3,6 +3,26 @@ let table = document.getElementById("member-table");
 
 document.querySelectorAll("input[name=party]").forEach(e => e.addEventListener("change",createTable))
 
+let states = [];
+
+for(let i=0; i<members.length;i++){
+    if(!states.includes(members[i].state)){
+        states.push(members[i].state);
+    }
+}
+
+let select = document.getElementById("state");
+
+for (let i = 0; i < states.length; i++) {
+    let option = document.createElement("option");
+    option.value = states[i];
+    option.innerText = states[i];
+    select.appendChild(option);
+}
+
+document.querySelector("#state").addEventListener("change", createTable);
+
+
 createTable();
 
 function createTable(){
@@ -33,8 +53,11 @@ function createTable(){
     let tbody = document.createElement("tbody");
     let checkedParties = Array.from(document.querySelectorAll("input[name=party]:checked")).map(e => e.value);
 
+    let selectedState = document.querySelector("#state").value;
+
     for (let i = 0; i < members.length; i++) {
-        if(checkedParties.includes(members[i].party)){
+
+        if(checkedParties.includes(members[i].party) && (selectedState == members[i].state || selectedState == "all")){
             let tr = document.createElement("tr");
 
             let a = document.createElement("a");
