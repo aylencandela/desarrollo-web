@@ -1,0 +1,35 @@
+header>div:first-child h1{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 30px;
+}
+
+.bg-navy{
+    background-color: #5386A6;
+}
+
+.bg-mint{
+    background-color: #9DD8DC;
+}
+
+.bg-yellow{
+    background-color: #F9E03E;
+}
+
+body{
+    min-height: 100vh;
+}
+
+#tgif-logo{
+    width: 150px;
+}
+
+.btn-link{
+    font-weight: 1000;
+    color: rgb(66, 66, 66);
+}
+
+.btn-link:hover{
+    color: black;
+    text-decoration-line: none;
+}

@@ -51,7 +51,7 @@ function createTable(){
     table.appendChild(thead);
 
     let tbody = document.createElement("tbody");
-    //let checkedParties = Array.from(document.querySelectorAll("input[name=party]:checked")).map(e => e.value);
+    let checkedParties = Array.from(document.querySelectorAll("input[name=party]:checked")).map(e => e.value);
 
     let selectedState = document.querySelector("#state").value;
 
