@@ -110,7 +110,7 @@ body{
 
 main{
     margin: 5% 5%;
-    min-height: 70vh;
+    min-height: 48.2vh;
 }
 
 article, dl, #container{
@@ -255,10 +255,8 @@ caption{
 fieldset{
     display: flex;
     flex-direction: column;
-    border: none;
-    border-top: solid 5px var(--green-color);
-    border-left: solid 5px var(--green-color);
-    border-top-left-radius: 15px;
+    border: solid 2px grey;
+    border-radius: 15px;
     margin: 15px 0;
 }
 

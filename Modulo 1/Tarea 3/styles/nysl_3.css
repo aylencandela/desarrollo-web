@@ -95,7 +95,6 @@ nav>a:hover{
     justify-content: center;
     align-items: center;
     border-radius: 0 0 60px 0;
-
 }
 
 /* Body Styles */
@@ -110,7 +109,7 @@ body{
 
 main{
     margin: 5% 5%;
-    min-height: 70vh;
+    min-height: 48.2vh;
 }
 
 article, dl, #container{

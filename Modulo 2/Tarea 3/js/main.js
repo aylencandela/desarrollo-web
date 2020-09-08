@@ -14,10 +14,12 @@ for(let i=0; i<members.length;i++){
 let select = document.getElementById("state");
 
 for (let i = 0; i < states.length; i++) {
-    let option = document.createElement("option");
-    option.value = states[i];
-    option.innerText = states[i];
-    select.appendChild(option);
+    if(select != null){
+        let option = document.createElement("option");
+        option.value = states[i];
+        option.innerText = states[i];
+        select.appendChild(option);
+    }
 }
 
 document.querySelector("#state").addEventListener("change", createTable);
