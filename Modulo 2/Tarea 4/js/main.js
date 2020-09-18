@@ -1,41 +1,50 @@
+const app = new Vue ({
+    el: "#app", //elemento donde tiene que trabajar vue
+    data: {
+        init: {headers: {"X-API-Key": "qvOhMRQOEXwjZaojLscnjlBbupH8x7HkJJYhh4nh"}},
+        members: [],
+        checkedParties: ["D", "R", "ID"],
+        states: [],
+        selectedState: 'all'
+    },
 
-async function getData(){
-    // if(){ //que condicion deberia poner?? como reconozco que pagina es para senate o house?
-    //     let senateOrHouse = 'senate'
-    // }else{
-    //     let senateOrHouse = 'house'
-    // }
-
-    let senateOrHouse = 'senate'
-
-    let api = 'https://api.propublica.org/congress/v1/113/' + senateOrHouse + '/members.json'
-    
-    let init = {
-        method: 'GET',
-        headers: {
-            "X-API-Key": "qvOhMRQOEXwjZaojLscnjlBbupH8x7HkJJYhh4nh"
+    methods: {
+        getApi: function(){
+            if(document.getElementById('senate')){
+                return 'https://api.propublica.org/congress/v1/113/senate/members.json'
+            }else if(document.getElementById('house')){
+                return 'https://api.propublica.org/congress/v1/113/house/members.json'
+            }
         }
+    },
+
+    created: function(){
+        fetch(this.getApi(),this.init)
+        .then(function(resp){
+            if(resp.ok){
+                return resp.json()
+            }else{
+                throw new Error(resp.status)
+            }
+        })
+        .then(data => {
+            this.members = data.results[0].members
+            for(let i=0; i<this.members.length;i++){
+                if(!this.states.includes(this.members[i].state)){
+                    this.states.push(this.members[i].state);
+                }
+            }
+        })
+        .catch(function(error){
+            alert(error)
+        })
+    },
+    
+    computed: {
+        filtered: function (){
+            return this.members.filter(m => 
+                this.checkedParties.includes(m.party) && (this.selectedState == m.state || this.selectedState == "all")
+            )
+        },
     }
-    
-    let members
-
-    await fetch(api,init)
-    .then(function(response){
-        if(response.ok){
-            return response.json()
-        }else{
-            throw new Error(response.status)
-        }
-    })
-    .then(function(data){
-        members = data.results[0].members
-    })
-    .catch(function(error){
-        alert(error)
-    })
-
-    return members
-}
-
-let members = getData()
-console.log(members) //que es una promise?
+})
